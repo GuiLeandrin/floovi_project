@@ -1,0 +1,82 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #E6E0F8, #C1B3F8);
+    cursor: url("cursor.png"), auto;
+}
+.container {
+    height: 500px;
+    width: 750px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    border-radius: 50px;
+    background-color: white;
+}
+.imageLogin {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.imageLogin img {
+    height: 450px;
+    width: 350px;
+    border-radius: 40px;
+    margin-left: 25px;
+}
+.login {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+.title {
+    height: 125px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 3px;
+}
+.title h1 {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+.title img {
+    height: 40px;
+    width: 40px;
+}
+.forms {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-items: center;
+    gap: 20px;
+}
+.forms input {
+    border: none;
+    outline: none;
+    padding: 3px;
+    cursor: url("cursor.png"), auto;
+}
+.forms button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: url("cursor.png"), auto;
+}
+.resetPassword {
+    height: 100px;
+    width: 100%;
+}
