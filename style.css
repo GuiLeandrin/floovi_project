@@ -1,82 +1,71 @@
+* {
+    box-sizing: border-box;
+}
 body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
     margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #E6E0F8, #C1B3F8);
+    background-color: #e6ddfb;
     cursor: url("cursor.png"), auto;
+    display: grid;
+    place-items: center;
 }
 .container {
-    height: 500px;
-    width: 750px;
+    height: 80%;
+    width: 70%; 
+    border-radius: 4vw;
+    background-color: white;
+    padding: 25px;
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    border-radius: 50px;
-    background-color: white;
+    overflow: hidden; 
 }
-.imageLogin {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: start;
+.login-image {
+    height: 100%;
+    flex: 1 1 50%;
 }
-.imageLogin img {
-    height: 450px;
-    width: 350px;
-    border-radius: 40px;
-    margin-left: 25px;
+.login-image img {
+    height: 100%;
+    width: 90%;
+    border-radius: 3vw;
+    object-fit: cover;
 }
 .login {
-    flex: 1;
+    height: 100%;
+    width: 100%;
+    flex: 1 1 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    min-width: 0;
 }
-.title {
-    height: 125px;
+.login-title {
+    height: 50px;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 3px;
 }
-.title h1 {
-    margin: 0;
-    font-family: "Inter", sans-serif;
-}
-.title img {
-    height: 40px;
-    width: 40px;
-}
-.forms {
-    height: 100px;
+.login-form {
+    height: 50px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-items: center;
-    gap: 20px;
 }
-.forms input {
-    border: none;
-    outline: none;
-    padding: 3px;
-    cursor: url("cursor.png"), auto;
-}
-.forms button {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: url("cursor.png"), auto;
-}
-.resetPassword {
-    height: 100px;
+.login-reset-password {
+    height: 50px;
     width: 100%;
+}
+
+@media (max-width: 750px) {
+    .container {
+        padding: 10px;
+    }
+    .login-image {
+        height: 50%;
+        flex-basis: 100%;
+    }
+    .login-image img {
+        height: 90%;
+        width: 100%;
+    }
+    .login {
+        height: 50%;
+        flex-basis: 100%;
+    }
 }
