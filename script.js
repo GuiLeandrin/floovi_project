@@ -2,12 +2,14 @@
 const buttonTheme = document.querySelector('.theme');
 const iconTheme = buttonTheme.querySelector('i');
 const container = document.querySelector('.container');
+const body = document.querySelector('body');
 const h1 = document.querySelector('h1');
 const theme = localStorage.getItem('theme');
 
 if (theme === 'dark') {
     container.classList.add('darkTheme');
     h1.classList.add('darkTheme');
+    body.classList.add('darkTheme');
     iconTheme.classList.replace('fa-sun', 'fa-moon');
     buttonTheme.title = 'Dark Theme';
     buttonTheme.classList.add('darkTheme');
@@ -16,6 +18,7 @@ if (theme === 'dark') {
 buttonTheme.addEventListener('click', () => {
     container.classList.toggle('darkTheme');
     h1.classList.toggle('darkTheme');
+    body.classList.toggle('darkTheme');
     buttonTheme.classList.toggle('darkTheme');
     
     if (container.classList.contains('darkTheme')) {

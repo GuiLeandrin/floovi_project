@@ -151,6 +151,12 @@ body {
 .theme.rotate {
     transform: rotateY(180deg);
 }
+.theme.rotate i {
+    transform: rotateY(180deg);
+}
+body.darkTheme {
+    background-color: #947de0;
+}
 .theme.darkTheme {
     background-color: #2f2f3f;
 }
@@ -207,6 +213,7 @@ h1.darkTheme {
     .theme {
         bottom: 10px;
         right: 10px;
+        box-shadow: none;
     }
 }
 @media (max-height: 800px) {
