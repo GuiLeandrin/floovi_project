@@ -1,4 +1,5 @@
 * {
+    cursor: url("cursor.png"), auto;
     box-sizing: border-box;
 }
 body {
@@ -7,7 +8,6 @@ body {
     overflow: hidden;
     margin: 0;
     background-color: #e6ddfb;
-    cursor: url("cursor.png"), auto;
     display: grid;
     place-items: center;
 }
@@ -16,7 +16,7 @@ body {
     width: 70%; 
     border-radius: 4vw;
     background-color: white;
-    padding: 25px;
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden; 
@@ -40,16 +40,125 @@ body {
     justify-content: center;
 }
 .login-title {
-    height: 50px;
+    height: auto;
     width: 100%;
+    margin-bottom: 30px;
+}
+.login-title-logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 8px;
+}
+.login-title-logo img {
+    height: auto;
+    max-width: 50px;
+}
+.login-title-logo h1 {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: clamp(1.8rem, 2.5vw, 3rem);
+}
+.login-title-subtitle p {
+    color: #A9A9A9;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    font-size: clamp(0.8rem, 1vw, 1.8rem);
 }
 .login-form {
-    height: 50px;
+    height: auto;
     width: 100%;
+    margin-bottom: 30px;
 }
-.login-reset-password {
-    height: 50px;
+.login-form form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.login-form input {
+    all: unset;
+    background-color: #f0eaff;
+    border-radius: 0.5vw;
+    padding: 15px;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.login-form input:focus {
+    border: 2px solid #b19cd9;
+    box-shadow: 0 4px 12px rgba(203, 157, 248, 0.4);
+}
+.login-form input:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(203, 157, 248, 0.4);
+}
+.login-form button {
+    all: unset;
+    color: #ffff;
+    background-color: #c084fc;
+    border-radius: 0.5vw;
+    padding: 15px;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.login-form button:hover {
+    background-color: #943bec;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(148, 59, 236, 0.4);
+}
+.login-register {
+    height: auto;
     width: 100%;
+    display: flex;
+    gap: 5px;
+}
+.login-register p {
+    color: #a9a9a9;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    font-size: clamp(0.6rem, 0.8vw, 1.2rem);
+}
+.login-register a {
+    color: #c084fc;
+    font-family: "Inter", sans-serif; 
+    font-weight: bold;
+    font-size: clamp(0.6rem, 0.8vw, 1.2rem);
+    transition: color 0.1s ease;
+}
+.login-register a:hover {
+    color: #943bec;
+}
+.theme {
+    width: clamp(30px, 5vw, 50px);
+    height: clamp(30px, 5vw, 50px);
+    font-size: clamp(12px, 2vw, 20px);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #81819e;
+    color: #f1f1f1;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    transition: transform 0.7s ease;
+    transform-style: preserve-3d;
+}
+.theme.rotate {
+    transform: rotateY(180deg);
+}
+.theme.darkTheme {
+    background-color: #2f2f3f;
+}
+.container.darkTheme {
+    background-color: #2f2f3f;
+}
+h1.darkTheme {
+    color: #f1f1f1;
 }
 
 @media (max-width: 750px) {
@@ -67,5 +176,50 @@ body {
     .login {
         height: 50%;
         flex-basis: 100%;
+        justify-content: start;
+    }
+    .login-title-logo {
+        justify-content: center;
+    }
+    .login-title-logo img {
+        max-width: 35px;
+    }
+    .login-title-subtitle {
+        display: flex;
+        justify-content: center;
+    }
+    .login-form {
+        display: flex;
+        justify-content: center;
+    }
+    .login-form form {
+        justify-content: center;
+    }
+    .login-form input {
+        border-radius: 1.5vw;
+    }
+    .login-form button {
+        border-radius: 1.5vw;
+    }
+    .login-register {
+        justify-content: center;
+    }
+    .theme {
+        bottom: 10px;
+        right: 10px;
+    }
+}
+@media (max-height: 800px) {
+    .login-title {
+        margin-bottom: 15px;
+    }
+    .login-form {
+        margin-bottom: 15px;
+    }
+    .login-form input {
+        padding: 10px;
+    }
+    .login-form button {
+        padding: 10px;
     }
 }

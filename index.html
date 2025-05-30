@@ -9,16 +9,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/576a6b1350.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
         <div class="login-image"><img src="imageLogin.png"></div>
         <div class="login">
-            <div class="login-title"></div>
-            <div class="login-form"></div>
-            <div class="login-reset-password"></div>
+            <div class="login-title">
+                <div class="login-title-logo">
+                    <img src="favicon.png">
+                    <h1>Floovi</h1>
+                </div>
+                <div class="login-title-subtitle">
+                    <p>Log in with your account</p>
+                </div>
+            </div>
+            <div class="login-form">
+                <form action="login.php" method="POST">
+                    <input type="email" placeholder="E-mail:" name="" id="">
+                    <input type="password" placeholder="Password:" name="" id="">
+                    <button type="submit">Continue<i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </div>
+            <div class="login-register">
+                <p>Don’t have an account yet?</p>
+                <a href="register.html">Sign up</a>
+            </div>
         </div>
     </div>
+    <button class="theme" title="Light Theme"><i class="fas fa-sun"></i></button>
     <script src="script.js"></script>
 </body>
 </html>
